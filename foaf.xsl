@@ -4,26 +4,27 @@
                 xmlns:foaf="http://xmlns.com/foaf/0.1/">
 
     <xsl:template match="/">
-        <html>
+        <html xmlns="http://www.w3.org/1999/xhtml" >
             <head>
+                <meta charset="UTF-8"/>
                 <title>Profil FOAF de Nicole Pearson</title>
-                <?xml-stylesheet type="text/xsl" href="foaf.xsl"?>
+                <link rel="stylesheet" type="text/css" href="style.css"/>
             </head>
             <body>
                 <h1>Profil FOAF de Nicole Pearson</h1>
-                <div id="foaf-details">
-                    <xsl:apply-templates select="//foaf:Person"/>
-                </div>
+                <xsl:apply-templates select="//foaf:Person"/>
             </body>
         </html>
     </xsl:template>
 
-    <!-- Modèle pour afficher les détails de la personne -->
     <xsl:template match="foaf:Person">
-        <div class="profile">
+        <div class="profile" >
             <h2><xsl:value-of select="foaf:name"/></h2>
+            <xsl:text>&#10;</xsl:text>
             <p>Email: <a href="mailto:{foaf:email}"><xsl:value-of select="foaf:email"/></a></p>
+            <xsl:text>&#10;</xsl:text>
             <p>Date de naissance: <xsl:value-of select="foaf:dateOfBirth"/></p>
+            <xsl:text>&#10;</xsl:text>
             <p>Homepage: <a href="{foaf:homepage}"><xsl:value-of select="foaf:homepage"/></a></p>
         </div>
     </xsl:template>

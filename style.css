@@ -1,0 +1,43 @@
+/* Style pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Style pour l'en-tête */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style pour le profil FOAF */
+.profile {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Style pour le nom */
+.profile h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+/* Style pour les informations */
+.profile p {
+    margin-bottom: 10px;
+}
+
+/* Style pour les liens */
+.profile a {
+    color: #0070c9;
+    text-decoration: none;
+}
+
+.profile a:hover {
+    text-decoration: underline;
+}
